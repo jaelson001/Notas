@@ -122,6 +122,21 @@ body, html {
     overflow: hidden;
 }
 
+.note.focus{
+    opacity: 0;
+    padding: 0px 10px;
+    width: 100%;
+    color: #3c3848;
+    margin: 0;
+    max-height: 100%;
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: #f9f7f9;
+}
+
 .note .date {
     position: absolute;
     top: 10pt;
@@ -158,6 +173,16 @@ body, html {
     padding-left: 10px;
     color: #afacb5;
     font-size: 12pt;
+}
+
+.note_del {
+    background: transparent;
+    color: #ee3939;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #ee3939;
 }
 
 #popup_new_note {
