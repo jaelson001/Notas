@@ -1,0 +1,99 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #3f3f3f;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:#3f3f3f;
+    height:100%;                   /* text area height */
+    width:100%;                   /* text area width */
+    text-align:left;
+    padding:15px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:0px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+.title_bar h1 {
+    padding: 15px;
+    font-size:24pt;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    text-align:left;
+    color: #ff8915;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 1.5em;
+}
+.btn_add {
+    background: #ff8915;
+    color: #eeeeee;
+    width: 12%;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #333, 0px 0px 15px 3px #3339;
+}
+
+.note {
+    width: 100%;
+    color: #eeeeee;
+    margin: 30px 0px;
+}
+.note_title {
+  width: 100%;
+  font-weight: bolder;
+  margin: 0;
+  font-size: 14pt;
+}
+.note:before {
+  content: "";
+  width: 15px;
+  border-top: 2px solid #999999;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.note_content {
+    padding-left: 10px;
+    color: #eeeeee;
+    font-size: 12pt;
+}
