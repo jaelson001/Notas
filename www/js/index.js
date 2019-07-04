@@ -56,6 +56,7 @@ var app = {
             var data = document.createElement("div");
 
             nota.classList.add("note");
+            nota.classList.add("bounceIn");
             titulo_nota.classList.add("note_title");
             conteudo_nota.classList.add("note_content");
             data.classList.add("date");

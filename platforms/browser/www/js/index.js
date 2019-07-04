@@ -39,8 +39,6 @@ var app = {
     receivedEvent: function() {
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
-            document.getElementById("app").style.filter = "blur(3px)";
-
         });
         document.getElementById("btn_cancel").addEventListener("click", function(){
             document.getElementById("popup_note_title").value = "";
@@ -69,7 +67,7 @@ var app = {
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = today.getFullYear();
-            today = dd + '-' + mm + '-' + yyyy;
+            today = dd + '/' + mm + '/' + yyyy;
             data.innerHTML = today;
 
             nota.appendChild(titulo_nota);

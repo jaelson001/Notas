@@ -81,9 +81,9 @@ body, html {
 .content {
     height: 80%;
     display: flex;
-    flex-flow: column-reverse wrap;
+    flex-flow: row-reverse wrap;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 0px;
     position: relative;
     justify-content: flex-end;
@@ -131,6 +131,10 @@ body, html {
     border: 1px solid #6539ee;
     padding: 1pt 5pt;
     background: #f9f7f9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 .note_title {
   width: 100%;
@@ -161,7 +165,7 @@ body, html {
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: #f9f7f9ee;
+    background: #f9f7f9;
     position: fixed;
     top: 0;
     bottom: 0;
