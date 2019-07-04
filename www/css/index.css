@@ -261,8 +261,10 @@ body, html {
 }
 
 .bounceIn {
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
