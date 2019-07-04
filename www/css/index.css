@@ -86,7 +86,7 @@ body, html {
     overflow-y: auto;
     padding: 0px;
     position: relative;
-    justify-content: flex-end;
+    align-content: flex-start;
 }
 
 .btn {
@@ -112,6 +112,7 @@ body, html {
 }
 
 .note {
+    opacity:0;
     padding: 0px 10px;
     width: 100%;
     color: #3c3848;
@@ -165,7 +166,7 @@ body, html {
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: #f9f7f9;
+    background:#f9f7f9;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -191,19 +192,6 @@ body, html {
     padding: 10px;
     font-size: 14pt;
     border: none;
-}
-#popup_new_note {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: 100vw;
-    background: #f9f7f9ef;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    z-index: 3;
 }
 
 .btn_save, .btn_cancel {
@@ -267,4 +255,5 @@ body, html {
     animation-name: bounceIn;
     animation-delay: 1s;
     -webkit-animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
