@@ -39,8 +39,6 @@ var app = {
     receivedEvent: function() {
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
-            document.getElementById("app").style.filter = "blur(3px)";
-
         });
         document.getElementById("btn_cancel").addEventListener("click", function(){
             document.getElementById("popup_note_title").value = "";
