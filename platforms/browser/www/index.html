@@ -20,7 +20,6 @@
     under the License.
 -->
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -39,13 +38,18 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Notas</title>
 </head>
 
 <body>
-    <div class="app">
+    <div class="app" id="app">
         <div class="title_bar">
             <h1>Notas</h1>
+            <button class="menu_dot_btn">
+                <span class="menu_dot"></span>
+                <span class="menu_dot"></span>
+                <span class="menu_dot"></span>
+            </button>
         </div>
         <div class="content">
             <div class="note">
@@ -54,6 +58,19 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <div class="date">02-07-2019</div>
+            </div>
+            <div class="note">
+                <h2 class="note_title">Titulo da nota</h2>
+                <p class="note_content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="date">03-07-2019</div>
             </div>
             <div class="note">
                 <h2 class="note_title">Titulo da nota</h2>
@@ -61,16 +78,15 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-            </div>
-            <div class="note">
-                <h2 class="note_title">Titulo da nota</h2>
-                <p class="note_content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <div class="date">04-07-2019</div>
             </div>
         </div>
-        <button class="btn btn_add">+</button>
+        <button class="btn btn_add" id="new_note">+</button>
+        
+    </div>
+    <div id="popup_new_note">
+        <input type="text" id="popup_note_title" title="Titulo da nota" required="true" placeholder="Título da anotação">
+        <textarea id="popup_note_description" placeholder="Conteúdo da anotação"></textarea>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

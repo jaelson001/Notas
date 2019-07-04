@@ -38,11 +38,11 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Notas</title>
 </head>
 
 <body>
-    <div class="app">
+    <div class="app" id="app">
         <div class="title_bar">
             <h1>Notas</h1>
             <button class="menu_dot_btn">
@@ -81,7 +81,14 @@
                 <div class="date">04-07-2019</div>
             </div>
         </div>
-        <button class="btn btn_add">+</button>
+        <button class="btn btn_add" id="new_note">+</button>
+        
+    </div>
+    <div id="popup_new_note">
+        <input type="text" id="popup_note_title" title="Titulo da nota" required="true" placeholder="Título da anotação">
+        <textarea id="popup_note_description" placeholder="Conteúdo da anotação"></textarea>
+        <button class="btn btn_save" id="btn_save">Salvar</button>
+        <button class="btn btn_cancel" id="btn_cancel">Cancelar</button>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

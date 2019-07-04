@@ -36,14 +36,17 @@ var app = {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+    receivedEvent: function() {
+        document.getElementById("new_note").addEventListener("click", function(){
+            document.getElementById("popup_new_note").style.left = "0%";
+            document.getElementById("app").style.filter = "blur(3px)";
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+        });
+        document.getElementById("btn_cancel").addEventListener("click", function(){
+            document.getElementById("popup_note_title").value = "";
+            document.getElementById("popup_note_description").value = "";
+            document.getElementById("popup_new_note").style.left = "100%";
+            document.getElementById("app").style.filter = "none";
+        });
     }
 };

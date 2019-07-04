@@ -18,6 +18,8 @@
  */
 * {
     box-sizing: border-box;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    transition:all 0.3s;
 }
 
 body, html {
@@ -94,6 +96,7 @@ body, html {
   border: none;
   padding: 10px;
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 .btn_add {
     background: #6539ee;
@@ -126,7 +129,7 @@ body, html {
     border-radius: 10pt;
     border: 1px solid #6539ee;
     padding: 1pt 5pt;
-    background: #ffffff;
+    background: #f9f7f9;
 }
 .note_title {
   width: 100%;
@@ -149,4 +152,60 @@ body, html {
     padding-left: 10px;
     color: #afacb5;
     font-size: 12pt;
+}
+
+#popup_new_note {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    background: #f9f7f9ee;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 3;
+}
+
+#popup_note_title {
+    width: 90%;
+    padding: 10px;
+    font-size: 16pt;
+    height: 24pt;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #6539ee;
+    margin-top: 5%;
+}
+#popup_note_description {
+    height: 70%;
+    background: transparent;
+    border: none;
+    width: 90%;
+    padding: 10px;
+    font-size: 14pt;
+    border: none;
+}
+#popup_new_note {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    background: #f9f7f9ef;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 3;
+}
+
+.btn_save, .btn_cancel {
+    height: 30pt;
+    background: transparent;
+    color: #6539ee;
+    cursor: pointer;
+    margin: 5px;
+    width: 45%;
 }
