@@ -81,11 +81,12 @@ body, html {
 .content {
     height: 80%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column-reverse wrap;
     overflow: hidden;
     overflow-y: scroll;
     padding: 0px;
     position: relative;
+    justify-content: flex-end;
 }
 
 .btn {

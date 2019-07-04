@@ -81,11 +81,12 @@ body, html {
 .content {
     height: 80%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column-reverse wrap;
     overflow: hidden;
     overflow-y: scroll;
     padding: 0px;
     position: relative;
+    justify-content: flex-end;
 }
 
 .btn {
@@ -96,6 +97,7 @@ body, html {
   border: none;
   padding: 10px;
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 .btn_add {
     background: #6539ee;
@@ -177,10 +179,10 @@ body, html {
     border-bottom: 2px solid #6539ee;
     margin-top: 5%;
 }
-#popup_note_description{
-    height: 100%;
+#popup_note_description {
+    height: 70%;
     background: transparent;
-    border:none;
+    border: none;
     width: 90%;
     padding: 10px;
     font-size: 14pt;
@@ -198,4 +200,13 @@ body, html {
     bottom: 0;
     left: 100%;
     z-index: 3;
+}
+
+.btn_save, .btn_cancel {
+    height: 30pt;
+    background: transparent;
+    color: #6539ee;
+    cursor: pointer;
+    margin: 5px;
+    width: 45%;
 }
