@@ -131,6 +131,10 @@ body, html {
     border: 1px solid #6539ee;
     padding: 1pt 5pt;
     background: #f9f7f9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 .note_title {
   width: 100%;
