@@ -175,7 +175,10 @@ body, html {
     font-size: 12pt;
 }
 
-.note_del {
+.note:not(.focus) .note_del{
+    display: none;
+}
+.focus .note_del{
     background: transparent;
     color: #ee3939;
     position: absolute;

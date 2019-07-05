@@ -57,7 +57,6 @@ var app = {
             var conteudo_nota = document.createElement("P");
             var data = document.createElement("DIV");
             var del = document.createElement("BUTTON");
-            var close = document.createElement("BUTTON");
 
             nota.classList.add("note");
             nota.classList.add("bounceIn");
@@ -68,8 +67,6 @@ var app = {
             conteudo_nota.classList.add("note_content");
             del.classList.add("btn");
             del.classList.add("note_del");
-            close.classList.add("note_close");
-            close.classList.add("btn");
             data.classList.add("date");
 
             titulo_nota.innerHTML = popup_titulo;
@@ -83,16 +80,11 @@ var app = {
             today = dd + '/' + mm + '/' + yyyy;
             data.innerHTML = today;
 
-            close.addEventListener("click", function(){
-                var id = this.parentNode.getAttribute("id");
-                document.getElementById(id).classList.toggle("focus");
-            });
             del.addEventListener("click", function(){
                 var id = this.parentNode.getAttribute("id");
                 document.getElementById(id).outerHTML = "";
             });
             
-            nota.appendChild(close);
             nota.appendChild(titulo_nota);
             nota.appendChild(conteudo_nota);
             nota.appendChild(data);
