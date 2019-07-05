@@ -81,12 +81,12 @@ body, html {
 .content {
     height: 80%;
     display: flex;
-    flex-flow: column-reverse wrap;
+    flex-flow: row-reverse wrap;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 0px;
     position: relative;
-    justify-content: flex-end;
+    align-content: flex-start;
 }
 
 .btn {
@@ -112,6 +112,7 @@ body, html {
 }
 
 .note {
+    opacity:0;
     padding: 0px 10px;
     width: 100%;
     color: #3c3848;
@@ -119,6 +120,21 @@ body, html {
     position: relative;
     max-height: 65pt;
     overflow: hidden;
+}
+
+.note.focus{
+    opacity: 0;
+    padding: 0px 10px;
+    width: 100%;
+    color: #3c3848;
+    margin: 0;
+    max-height: 100%;
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: #f9f7f9;
 }
 
 .note .date {
@@ -131,6 +147,10 @@ body, html {
     border: 1px solid #6539ee;
     padding: 1pt 5pt;
     background: #f9f7f9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 .note_title {
   width: 100%;
@@ -155,13 +175,26 @@ body, html {
     font-size: 12pt;
 }
 
+.note:not(.focus) .note_del{
+    display: none;
+}
+.focus .note_del{
+    background: transparent;
+    color: #ee3939;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #ee3939;
+}
+
 #popup_new_note {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: #f9f7f9ee;
+    background:#f9f7f9;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -188,19 +221,6 @@ body, html {
     font-size: 14pt;
     border: none;
 }
-#popup_new_note {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: 100vw;
-    background: #f9f7f9ef;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    z-index: 3;
-}
 
 .btn_save, .btn_cancel {
     height: 30pt;
@@ -209,4 +229,59 @@ body, html {
     cursor: pointer;
     margin: 5px;
     width: 45%;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-fill-mode: forwards;
 }

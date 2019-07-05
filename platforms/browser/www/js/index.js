@@ -16,7 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var contador = 0;
 var app = {
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -39,8 +41,6 @@ var app = {
     receivedEvent: function() {
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
-            document.getElementById("app").style.filter = "blur(3px)";
-
         });
         document.getElementById("btn_cancel").addEventListener("click", function(){
             document.getElementById("popup_note_title").value = "";
@@ -52,29 +52,47 @@ var app = {
             var popup_titulo = document.getElementById("popup_note_title").value;
             var popup_conteudo =document.getElementById("popup_note_description").value;
 
-            var nota = document.createElement("div");
-            var titulo_nota = document.createElement("h2");
-            var conteudo_nota = document.createElement("p");
-            var data = document.createElement("div");
+            var nota = document.createElement("DIV");
+            var titulo_nota = document.createElement("H2");
+            var conteudo_nota = document.createElement("P");
+            var data = document.createElement("DIV");
+            var del = document.createElement("BUTTON");
 
             nota.classList.add("note");
+            nota.classList.add("bounceIn");
+            contador++;
+            nota.setAttribute("id",contador);
+            
             titulo_nota.classList.add("note_title");
             conteudo_nota.classList.add("note_content");
+            del.classList.add("btn");
+            del.classList.add("note_del");
             data.classList.add("date");
 
             titulo_nota.innerHTML = popup_titulo;
             conteudo_nota.innerHTML = popup_conteudo;
+            del.innerHTML = "excluir";
 
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = today.getFullYear();
-            today = dd + '-' + mm + '-' + yyyy;
+            today = dd + '/' + mm + '/' + yyyy;
             data.innerHTML = today;
 
+            del.addEventListener("click", function(){
+                var id = this.parentNode.getAttribute("id");
+                document.getElementById(id).outerHTML = "";
+            });
+            
             nota.appendChild(titulo_nota);
             nota.appendChild(conteudo_nota);
             nota.appendChild(data);
+            nota.appendChild(del);
+
+            nota.addEventListener("click", function(){
+                this.classList.toggle("focus");
+            });
 
             document.getElementById("content").appendChild(nota);
 
@@ -82,6 +100,8 @@ var app = {
             document.getElementById("popup_note_description").value = "";
             document.getElementById("popup_new_note").style.left = "100%";
             document.getElementById("app").style.filter = "none";
+
+            
         });
     }
 };
