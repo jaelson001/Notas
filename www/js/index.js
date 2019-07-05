@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+
+
+
  var contador = 0;
 var app = {
 
@@ -39,6 +43,29 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function() {
+
+
+
+//=================================================================
+//=================================================================
+//                  BANCO DE DADOS 
+    var db = null;
+    document.addEventListener('deviceready', function() {
+      db = window.sqlitePlugin.openDatabase({
+        name: 'Database.db',
+        location: 'default',
+      });
+    });
+    
+
+
+    //=================================================================
+    //=================================================================
+
+
+
+
+
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
         });
@@ -93,15 +120,21 @@ var app = {
             nota.addEventListener("click", function(){
                 this.classList.toggle("focus");
             });
+            
+            db.transaction(function(tx) {
+                tx.executeSql('CREATE TABLE IF NOT EXISTS lista (titulo, descricao, data)');
+                tx.executeSql('INSERT INTO lista VALUES (?,?,?)', [popup_titulo, popup_conteudo, today]);
+            }, function(error) {
+                console.log('Transaction ERROR: ' + error.message);
+            }, function(){alert("cadastrado!");});
+
 
             document.getElementById("content").appendChild(nota);
 
             document.getElementById("popup_note_title").value = "";
             document.getElementById("popup_note_description").value = "";
             document.getElementById("popup_new_note").style.left = "100%";
-            document.getElementById("app").style.filter = "none";
 
-            
         });
     }
 };
