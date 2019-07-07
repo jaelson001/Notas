@@ -49,13 +49,13 @@ var app = {
 //=================================================================
 //=================================================================
 //                  BANCO DE DADOS 
-    var db = null;
-    document.addEventListener('deviceready', function() {
-      db = window.sqlitePlugin.openDatabase({
-        name: 'Database.db',
-        location: 'default',
-      });
-    });
+    // var db = null;
+    // document.addEventListener('deviceready', function() {
+    //   db = window.sqlitePlugin.openDatabase({
+    //     name: 'Database.db',
+    //     location: 'default',
+    //   });
+    // });
     
 
 
@@ -121,12 +121,12 @@ var app = {
                 this.classList.toggle("focus");
             });
             
-            db.transaction(function(tx) {
-                tx.executeSql('CREATE TABLE IF NOT EXISTS lista (titulo, descricao, data)');
-                tx.executeSql('INSERT INTO lista VALUES (?,?,?)', [popup_titulo, popup_conteudo, today]);
-            }, function(error) {
-                console.log('Transaction ERROR: ' + error.message);
-            }, function(){alert("cadastrado!");});
+            // db.transaction(function(tx) {
+            //     tx.executeSql('CREATE TABLE IF NOT EXISTS lista (titulo, descricao, data)');
+            //     tx.executeSql('INSERT INTO lista VALUES (?,?,?)', [popup_titulo, popup_conteudo, today]);
+            // }, function(error) {
+            //     console.log('Transaction ERROR: ' + error.message);
+            // }, function(){alert("cadastrado!");});
 
 
             document.getElementById("content").appendChild(nota);
