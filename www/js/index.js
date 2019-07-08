@@ -1,26 +1,6 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 
 
-
-
- var contador = 0;
+var contador = 0;
 var app = {
 
     // Application Constructor
@@ -43,29 +23,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function() {
-
-
-
-//=================================================================
-//=================================================================
-//                  BANCO DE DADOS 
-    // var db = null;
-    // document.addEventListener('deviceready', function() {
-    //   db = window.sqlitePlugin.openDatabase({
-    //     name: 'Database.db',
-    //     location: 'default',
-    //   });
-    // });
-    
-
-
-    //=================================================================
-    //=================================================================
-
-
-
-
-
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
         });
@@ -121,14 +78,6 @@ var app = {
                 this.classList.toggle("focus");
             });
             
-            // db.transaction(function(tx) {
-            //     tx.executeSql('CREATE TABLE IF NOT EXISTS lista (titulo, descricao, data)');
-            //     tx.executeSql('INSERT INTO lista VALUES (?,?,?)', [popup_titulo, popup_conteudo, today]);
-            // }, function(error) {
-            //     console.log('Transaction ERROR: ' + error.message);
-            // }, function(){alert("cadastrado!");});
-
-
             document.getElementById("content").appendChild(nota);
 
             document.getElementById("popup_note_title").value = "";
