@@ -21,9 +21,7 @@
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     transition:all 0.3s;
 }
-:root{
-    counter-reset: contador;
-}
+
 body, html {
     background: #f9f7f9;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -42,7 +40,6 @@ body, html {
     padding: 0;
     margin: 0px;
     overflow: hidden;
-    counter-increment: contador 100;
 }
 
 .title_bar {
@@ -115,8 +112,6 @@ body, html {
 }
 
 .note {
-    counter-increment: contador -1;
-    order: counter(contador);
     opacity: 0;
     padding: 10px 10px;
     width: 100%;
