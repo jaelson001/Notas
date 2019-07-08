@@ -21,7 +21,9 @@
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     transition:all 0.3s;
 }
-
+:root{
+    counter-reset: contador;
+}
 body, html {
     background: #f9f7f9;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -33,13 +35,14 @@ body, html {
 }
 
 .app {
-    background: #f9f7f9;
+    background: #fff;
     height: 100%;
     width: 100%;
     text-align: left;
     padding: 0;
     margin: 0px;
     overflow: hidden;
+    counter-increment: contador 100;
 }
 
 .title_bar {
@@ -48,7 +51,7 @@ body, html {
 }
 
 .title_bar h1 {
-    padding: 15px;
+    padding: 20px;
     font-size: 30pt;
     font-weight: bold;
     margin: 0px;
@@ -112,16 +115,20 @@ body, html {
 }
 
 .note {
-    opacity:0;
-    padding: 0px 10px;
+    counter-increment: contador -1;
+    order: counter(contador);
+    opacity: 0;
+    padding: 10px 10px;
     width: 100%;
     color: #3c3848;
-    margin: 30px 0px;
+    margin: 30px 10px 0px 10px;
     position: relative;
     max-height: 65pt;
     overflow: hidden;
-    transition: all 0.3s,box-shadow 0.01s;
+    transition: all 0.3s,box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    background: #f4f4f4;
+    border-radius: 10px;
 }
 
 .note.focus {
@@ -137,9 +144,19 @@ body, html {
     bottom: 0;
     z-index: 3;
     background: #f9f7f9;
-    box-shadow: 0px 0px 0px 300pt #6539ee;
+    box-shadow: 0px 0px 25px 15pt #3332, 0px 0px 2px #3333;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+}
+
+.focus .note_content {
+    font-size: 14pt;
+    text-align: justify;
+    width: 91%;
+    margin: 15px auto;
+    height: 70%;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .note .date {
@@ -151,7 +168,7 @@ body, html {
     border-radius: 10pt;
     border: 1px solid #6539ee;
     padding: 1pt 5pt;
-    background: #f9f7f9;
+    background: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
