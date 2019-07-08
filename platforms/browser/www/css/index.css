@@ -20,6 +20,7 @@
     box-sizing: border-box;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     transition:all 0.3s;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 
 body, html {
@@ -135,7 +136,7 @@ body, html {
     border-radius: 10px;
 }
 
-.note.focus {
+/*.note.focus {
     opacity: 0;
     padding: 30px 15px 0px 15px;
     width: 94%;
@@ -148,10 +149,10 @@ body, html {
     top: 12%;
     z-index: 3;
     background: #f9f7f9;
-    box-shadow: 0px 0px 25px 150pt #3337;
+    box-shadow: 0px 0px 0px 150pt #3337;
     border-radius: 30px;
-}
-/*.note.focus {
+}*/
+.note.focus {
     opacity: 0;
     padding: 30px 15px 0px 15px;
     width: 100%;
@@ -159,15 +160,16 @@ body, html {
     margin: 0;
     max-height: 100%;
     overflow: hidden;
-    height: 75%;
+    height: 100%;
     position: fixed;
     bottom: 0;
     z-index: 3;
     background: #f9f7f9;
-    box-shadow: 0px 0px 25px 15pt #3332, 0px 0px 2px #3333;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-}*/
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    border-top: 3px solid #7c58ec;
+}
 
 .focus .note_content {
     font-size: 14pt;
@@ -252,7 +254,7 @@ body, html {
     border: none;
     background: transparent;
     border-bottom: 2px solid #6539ee;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 #popup_note_description {
     height: 70%;
