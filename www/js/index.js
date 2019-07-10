@@ -23,6 +23,7 @@ window.onload = function(){
             nota.classList.add("note");
             nota.classList.add("bounceIn");
             nota.setAttribute("id",chave);
+            nota.style.order = chave;
             titulo_nota.classList.add("note_title");
             conteudo_nota.classList.add("note_content");
             del.classList.add("btn");
@@ -101,6 +102,7 @@ var app = {
             nota.classList.add("note");
             nota.classList.add("bounceIn");
             nota.setAttribute("id",contador);
+            nota.style.order = contador;
             titulo_nota.classList.add("note_title");
             conteudo_nota.classList.add("note_content");
             del.classList.add("btn");
