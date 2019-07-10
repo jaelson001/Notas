@@ -1,51 +1,58 @@
-var contador = (localStorage.length)/3;
+var contador=0;
 
 window.onload = function(){
-    for (var i = 1; i <= contador; i++) {
-        var popup_titulo = localStorage.getItem(i+"_t");
-        var popup_conteudo = localStorage.getItem(i+"_c");
-        var today = localStorage.getItem(i+"_d");
+    if(localStorage.lenght != 0){
+        contador = (localStorage.length);
 
-        var nota = document.createElement("DIV");
-        var titulo_nota = document.createElement("H2");
-        var conteudo_nota = document.createElement("P");
-        var data = document.createElement("DIV");
-        var del = document.createElement("BUTTON");
+        for (var i = 0; i < contador; i++) {
+            var strItem = localStorage.getItem(localStorage.key(i));
+            
+            if(strItem){var item = strItem.split("¨");}
+            var chave = item[0];
+            var popup_titulo = item[1];
+            var popup_conteudo = item[2];
+            var today = item[3];
+            
 
-        nota.classList.add("note");
-        nota.classList.add("bounceIn");
-        nota.setAttribute("id",i);
-        titulo_nota.classList.add("note_title");
-        conteudo_nota.classList.add("note_content");
-        del.classList.add("btn");
-        del.classList.add("note_del");
-        data.classList.add("date");
+            var nota = document.createElement("DIV");
+            var titulo_nota = document.createElement("H2");
+            var conteudo_nota = document.createElement("P");
+            var data = document.createElement("DIV");
+            var del = document.createElement("BUTTON");
 
-        titulo_nota.innerHTML = popup_titulo;
-        conteudo_nota.innerHTML = popup_conteudo;
-        del.innerHTML = "excluir";
-        data.innerHTML = today;
+            nota.classList.add("note");
+            nota.classList.add("bounceIn");
+            nota.setAttribute("id",chave);
+            titulo_nota.classList.add("note_title");
+            conteudo_nota.classList.add("note_content");
+            del.classList.add("btn");
+            del.classList.add("note_del");
+            data.classList.add("date");
 
-        del.addEventListener("click", function(){
-            var id = this.parentNode.getAttribute("id");
-            document.getElementById(id).outerHTML = "";
+            titulo_nota.innerHTML = popup_titulo;
+            conteudo_nota.innerHTML = popup_conteudo;
+            del.innerHTML = "excluir";
+            data.innerHTML = today;
 
-            // REMOVER LOCALMENTE
-            localStorage.removeItem(id+"_t");
-            localStorage.removeItem(id+"_c");
-            localStorage.removeItem(id+"_d");
-        });
+            del.addEventListener("click", function(){
+                var id = this.parentNode.getAttribute("id");
+                document.getElementById(id).outerHTML = "";
 
-        nota.appendChild(titulo_nota);
-        nota.appendChild(conteudo_nota);
-        nota.appendChild(data);
-        nota.appendChild(del);
+                // REMOVER LOCALMENTE
+                localStorage.removeItem(id);
+            });
 
-        nota.addEventListener("click", function(){
-            this.classList.toggle("focus");
-        });
-        
-        document.getElementById("content").appendChild(nota);
+            nota.appendChild(titulo_nota);
+            nota.appendChild(conteudo_nota);
+            nota.appendChild(data);
+            nota.appendChild(del);
+
+            nota.addEventListener("click", function(){
+                this.classList.toggle("focus");
+            });
+            
+            document.getElementById("content").appendChild(nota);
+        }
     }
 }
 
@@ -94,9 +101,6 @@ var app = {
             nota.classList.add("note");
             nota.classList.add("bounceIn");
             nota.setAttribute("id",contador);
-            titulo_nota.setAttribute("id",contador+"_t");
-            conteudo_nota.setAttribute("id",contador+"_c");
-            data.setAttribute("id",contador+"_d");
             titulo_nota.classList.add("note_title");
             conteudo_nota.classList.add("note_content");
             del.classList.add("btn");
@@ -119,15 +123,12 @@ var app = {
                 document.getElementById(id).outerHTML = "";
 
                 // REMOVER LOCALMENTE
-                localStorage.removeItem(id+"_t");
-                localStorage.removeItem(id+"_c");
-                localStorage.removeItem(id+"_d");
+                localStorage.removeItem(id);
             });
             
             // SALVAR LOCALMENTE
-            localStorage.setItem(contador+"_t", popup_titulo);
-            localStorage.setItem(contador+"_c", popup_conteudo);
-            localStorage.setItem(contador+"_d", today);
+            var bdContent = nota.getAttribute("id") + "¨" + popup_titulo + "¨" + popup_conteudo + "¨" + today;
+            localStorage.setItem(contador, bdContent);
 
             nota.appendChild(titulo_nota);
             nota.appendChild(conteudo_nota);
