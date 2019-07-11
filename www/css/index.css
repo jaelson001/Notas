@@ -95,7 +95,7 @@ body, html {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 32px 3px #3335;
+    -webkit-box-shadow: 0px 0px 32px 3px #3335;
 }
 
 .btn_add img {
@@ -112,11 +112,11 @@ body, html {
     position: relative;
     max-height: 65pt;
     overflow: hidden;
-    transition: all 0.3s,box-shadow 0s;
+    transition: all 0.3s,-webkit-box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 0px 50px -10px #3333;
+    -webkit-box-shadow: 0px 0px 50px -10px #3333;
     background-image: url("../img/fundo.png");
     background-position: center bottom;
     background-size: cover;
