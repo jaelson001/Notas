@@ -2,10 +2,10 @@
 <widget id="com.exodo.notas" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Notas</name>
     <description>
-        Aplicativo de notas.
+        Aplicativo de notas minimalista para quem gosta de simplicidade na hora de organizar suas anotações.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="jaelsonjacinto@outlook.com" href="http://jaelsonjacinto.tk">
+        Jaelson Jacinto de Araújo
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
