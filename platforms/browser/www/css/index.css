@@ -121,6 +121,16 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.note::after {
+    content: "";
+    width: 100%;
+    background: linear-gradient(to top, #ffffff, #fff0);
+    height: 23px;
+    position: absolute;
+    border: ;
+    bottom: 0;
+    left: 0;
+}
 
 .note.focus {
     opacity: 0;
