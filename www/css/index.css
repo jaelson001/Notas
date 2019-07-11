@@ -69,7 +69,7 @@ body, html {
     padding: 15px 0px;
     position: relative;
     align-content: flex-start;
-    background-image: linear-gradient(to top ,#fff,#f0f0f0,#f0f0f0, #fff);
+    background-image: linear-gradient(to top ,#fbfbfb,#e6e6e6,#f0f0f0, #fbfbfb);
 }
 
 .btn {
@@ -124,7 +124,6 @@ body, html {
 .note::after {
     content: "";
     width: 100%;
-    background: linear-gradient(to top, #ffffff, #fff0);
     height: 23px;
     position: absolute;
     border: ;
