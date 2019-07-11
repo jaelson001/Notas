@@ -26,7 +26,7 @@
     outline: none;
 }
 body, html {
-    background: #f9f7f9;
+    background: #fbfbfb;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
@@ -36,7 +36,7 @@ body, html {
 }
 
 .app {
-    background: #fff;
+    background: #fbfbfb;
     height: 100%;
     width: 100%;
     text-align: left;
@@ -95,6 +95,7 @@ body, html {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 32px 3px #3335;
 }
 
 .btn_add img {
@@ -113,8 +114,13 @@ body, html {
     overflow: hidden;
     transition: all 0.3s,box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    background: #f4f4f4;
+    background: #ffffff;
     border-radius: 10px;
+    box-shadow: 0px 0px 50px -10px #3333;
+    background-image: url("../img/fundo.png");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .note.focus {
@@ -129,11 +135,12 @@ body, html {
     position: fixed;
     bottom: 0;
     z-index: 3;
-    background: linear-gradient(to top,#f1f1f1, #ffffff);
+    background: #fbfbfb;
     border-radius: 0;
     top: 0;
     left: 0;
-    border-top: 3px solid #7c58ec;
+    border-top: 3px solid #6539ee;
+    background-image: url("../img/fundo2.png");
 }
 
 .focus .note_content {
@@ -180,21 +187,23 @@ body, html {
 
 .note_content {
     padding-left: 10px;
-    color: #afacb5;
+    color: #333b;
     font-size: 12pt;
+    line-height: 20pt;
 }
 
 .note:not(.focus) .note_del{
     display: none;
 }
-.focus .note_del{
+.focus .note_del {
     background: transparent;
-    color: #ee3939;
+    color: #db4040;
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    border: 2px solid #ee3939;
+    border: 1px solid #db4040;
+    font-weight: lighter;
 }
 
 #popup_new_note {
