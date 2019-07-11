@@ -61,12 +61,12 @@ body, html {
     width: 70%;
 }
 .content {
-    height: 80%;
+    height: 85%;
     display: flex;
     flex-flow: row-reverse wrap;
     overflow: hidden;
     overflow-y: auto;
-    padding: 0px;
+    padding: 15px 0px;
     position: relative;
     align-content: flex-start;
 }
@@ -95,7 +95,7 @@ body, html {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 32px 3px #3335;
+    -webkit-box-shadow: 0px 15px 32px 3px #d3d3d3;
 }
 
 .btn_add img {
@@ -105,18 +105,18 @@ body, html {
 
 .note {
     opacity: 0;
-    padding: 10px 10px;
+    padding: 20px 20px;
     width: 100%;
     color: #3c3848;
-    margin: 30px 10px 0px 10px;
+    margin: 30px 15px 0px 15px;
     position: relative;
-    max-height: 65pt;
+    max-height: 70pt;
     overflow: hidden;
-    transition: all 0.3s,box-shadow 0s;
+    transition: all 0.3s,-webkit-box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 0px 50px -10px #3333;
+    -webkit-box-shadow: 0px 15px 50px -10px #d3d3d3;
     background-image: url("../img/fundo.png");
     background-position: center bottom;
     background-size: cover;
@@ -212,7 +212,7 @@ body, html {
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: linear-gradient(to top,#f1f1f1, #ffffff);
+    background: #f3f3f3;
     position: fixed;
     top: 0;
     bottom: 0;

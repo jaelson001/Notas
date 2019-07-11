@@ -4,8 +4,8 @@
   "name": "Notas",
   "short_name": "Notas",
   "version": "com.exodo.notas",
-  "description": "Aplicativo de notas.",
-  "author": "PhoneGap Team",
+  "description": "Aplicativo de notas minimalista para quem gosta de simplicidade na hora de organizar suas anotações.",
+  "author": "Jaelson Jacinto de Araújo",
   "icons": [],
   "start_url": "index.html"
 }
