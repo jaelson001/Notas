@@ -79,6 +79,14 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function() {
+        if (cordova.platformId == 'android') {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#cccccc');
+        }
+        document.getElementById("limpar").addeventListener("click", function(){
+            localStorage.clear();
+        });
+
         document.getElementById("new_note").addEventListener("click", function(){
             document.getElementById("popup_new_note").style.left = "0%";
         });

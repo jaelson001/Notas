@@ -97,7 +97,10 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-
+#limpar{
+    position: absolute:top:10px;
+    left:50%;
+}
 .btn_add img {
     height: 20px;
     width: auto;
