@@ -81,6 +81,7 @@ var app = {
     receivedEvent: function() {
         if (cordova.platformId == 'android') {
             StatusBar.overlaysWebView(true);
+            StatusBar.hide();
             StatusBar.backgroundColorByHexString('#cccccc');
         }
 

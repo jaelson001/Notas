@@ -7,6 +7,5 @@
   "description": "Aplicativo de notas minimalista para quem gosta de simplicidade na hora de organizar suas anotações.",
   "author": "Jaelson Jacinto de Araújo",
   "icons": [],
-  "start_url": "index.html",
-  "theme_color": "#ffffff"
+  "start_url": "index.html"
 }
