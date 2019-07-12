@@ -98,7 +98,8 @@ body, html {
     align-items: center;
 }
 #limpar{
-    position: absolute:top:10px;
+    position: absolute;
+    top:10px;
     left:50%;
 }
 .btn_add img {
