@@ -96,7 +96,7 @@ var app = {
         });
         document.getElementById("btn_save").addEventListener("click", function(){
             var popup_titulo = document.getElementById("popup_note_title").value;
-            var popup_conteudo =document.getElementById("popup_note_description").value;
+            var popup_conteudo =document.getElementById("popup_note_description").value.replace(/\n/g, "<br>");
 
             var nota = document.createElement("DIV");
             var titulo_nota = document.createElement("H2");
