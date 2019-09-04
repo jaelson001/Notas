@@ -36,7 +36,7 @@ body, html {
 }
 
 .app {
-    background: #fbfbfb;
+    background: #14181d;
     height: 100%;
     width: 100%;
     text-align: left;
@@ -57,7 +57,7 @@ body, html {
     margin: 0px;
     overflow: visible;
     text-align: left;
-    color: #6539ee;
+    color: #fff;
     width: 70%;
 }
 .content {
@@ -69,7 +69,7 @@ body, html {
     padding: 15px 0px;
     position: relative;
     align-content: flex-start;
-    background-image: linear-gradient(to top ,#fbfbfb,#e6e6e6,#e6e6e6, #fbfbfb);
+    background: #14181d;
 }
 
 .btn {
@@ -83,7 +83,7 @@ body, html {
   text-transform: uppercase;
 }
 .btn_add {
-    background: #6539ee;
+    background: #0bbe3a;
     color: #eeeeee;
     width: 12%;
     position: absolute;
@@ -107,16 +107,15 @@ body, html {
     opacity: 0;
     padding: 20px 20px;
     width: 100%;
-    color: #3c3848;
+    color: #fff;
     margin: 30px 15px 0px 15px;
     position: relative;
     max-height: 70pt;
     overflow: hidden;
     transition: all 0.3s,-webkit-box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    background: #ffffff;
+    background: #262b37;
     border-radius: 10px;
-    background-image: url("../img/fundo.png");
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -135,7 +134,6 @@ body, html {
     opacity: 0;
     padding: 30px 15px 0px 15px;
     width: 100%;
-    color: #3c3848;
     margin: 0;
     max-height: 100%;
     overflow: hidden;
@@ -143,12 +141,12 @@ body, html {
     position: fixed;
     bottom: 0;
     z-index: 3;
-    background: #fbfbfb;
+    background: #1b1e27;
     border-radius: 0;
     top: 0;
     left: 0;
-    border-top: 3px solid #6539ee;
-    background-image: url("../img/fundo2.png");
+    border-top: 3px solid #0bbe3a;
+    color: #fff;
 }
 
 .focus .note_content {
@@ -165,10 +163,10 @@ body, html {
     position: absolute;
     top: 10pt;
     right: 10px;
-    color: #6539ee;
+    color: #fff;
     font-size: 8pt;
     border-radius: 10pt;
-    border: 1px solid #6539ee;
+    border: 1px solid #fff;
     padding: 1pt 5pt;
     background: transparent;
     display: flex;
@@ -190,12 +188,22 @@ body, html {
     display: block;
     margin-bottom: 10px;
     height: 2px;
-    background: #6539ee;
+    background: #0bbe3a;
 }
+.note:nth-child(2n+1)::before{
+    background: #0b86be;
+}
+.note:nth-child(2n)::before{
+    background: #be710b;
+}
+.note:nth-child(3n)::before{
+    background: #0bbe3a;
+}
+
 
 .note_content {
     padding-left: 10px;
-    color: #333b;
+    color: #fff;
     font-size: 12pt;
     line-height: 20pt;
 }
@@ -220,7 +228,7 @@ body, html {
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: #f3f3f3;
+    background: #14181d;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -235,8 +243,9 @@ body, html {
     height: 24pt;
     border: none;
     background: transparent;
-    border-bottom: 2px solid #6539ee;
+    border-bottom: 2px solid #0bbe3a;
     margin-top: 10%;
+    color: #fff;
 }
 #popup_note_description {
     height: 70%;
@@ -246,12 +255,13 @@ body, html {
     padding: 10px;
     font-size: 14pt;
     border: none;
+    color: #fff;
 }
 
 .btn_save, .btn_cancel {
     height: 30pt;
     background: transparent;
-    color: #6539ee;
+    color: #fff;
     cursor: pointer;
     margin: 5px;
     width: 45%;
