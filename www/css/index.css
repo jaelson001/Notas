@@ -219,7 +219,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #db4040;
-    font-weight: lighter;
+    font-weight: bolder;
 }
 
 #popup_new_note {
