@@ -36,7 +36,7 @@ body, html {
 }
 
 .app {
-    background: #14181d;
+    background: #fefefe;
     height: 100%;
     width: 100%;
     text-align: left;
@@ -52,12 +52,12 @@ body, html {
 
 .title_bar h1 {
     padding: 20px;
-    font-size: 30pt;
+    font-size: 24pt;
     font-weight: bold;
     margin: 0px;
     overflow: visible;
     text-align: left;
-    color: #fff;
+    color: #500bbe;
     width: 70%;
 }
 .content {
@@ -69,7 +69,7 @@ body, html {
     padding: 15px 0px;
     position: relative;
     align-content: flex-start;
-    background: #14181d;
+    background: #fefefe;
 }
 
 .btn {
@@ -83,7 +83,7 @@ body, html {
   text-transform: uppercase;
 }
 .btn_add {
-    background: #0bbe3a;
+    background: #500bbe;
     color: #eeeeee;
     width: 12%;
     position: absolute;
@@ -107,18 +107,20 @@ body, html {
     opacity: 0;
     padding: 20px 20px;
     width: 100%;
-    color: #fff;
+    color: #500bbe;
     margin: 30px 15px 0px 15px;
     position: relative;
     max-height: 70pt;
     overflow: hidden;
     transition: all 0.3s,-webkit-box-shadow 0s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    background: #262b37;
+    background: #ffffff;
     border-radius: 10px;
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0px 2px 30px #0003;
+    -webkit-box-shadow: 0px 2px 30px #0003;
 }
 .note::after {
     content: "";
@@ -141,12 +143,12 @@ body, html {
     position: fixed;
     bottom: 0;
     z-index: 3;
-    background: #1b1e27;
+    background: #ffffff;
     border-radius: 0;
     top: 0;
     left: 0;
-    border-top: 3px solid #0bbe3a;
-    color: #fff;
+    border-top: 3px solid #500bbe;
+    color: #500bbe;
 }
 
 .focus .note_content {
@@ -163,10 +165,10 @@ body, html {
     position: absolute;
     top: 10pt;
     right: 10px;
-    color: #fff;
+    color: #500bbe;
     font-size: 8pt;
     border-radius: 10pt;
-    border: 1px solid #fff;
+    border: 1px solid #500bbe;
     padding: 1pt 5pt;
     background: transparent;
     display: flex;
@@ -191,7 +193,7 @@ body, html {
     background: #0bbe3a;
 }
 .note:nth-child(2n+1)::before{
-    background: #0b86be;
+    background: #500bbe;
 }
 .note:nth-child(2n)::before{
     background: #be710b;
@@ -203,7 +205,7 @@ body, html {
 
 .note_content {
     padding-left: 10px;
-    color: #fff;
+    color: #500bbe;
     font-size: 12pt;
     line-height: 20pt;
 }
@@ -228,7 +230,7 @@ body, html {
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    background: #14181d;
+    background: #fefefe;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -243,9 +245,9 @@ body, html {
     height: 24pt;
     border: none;
     background: transparent;
-    border-bottom: 2px solid #0bbe3a;
+    border-bottom: 2px solid #500bbe;
     margin-top: 10%;
-    color: #fff;
+    color: #500bbe;
 }
 #popup_note_description {
     height: 70%;
@@ -255,13 +257,13 @@ body, html {
     padding: 10px;
     font-size: 14pt;
     border: none;
-    color: #fff;
+    color: #500bbe;
 }
 
 .btn_save, .btn_cancel {
     height: 30pt;
     background: transparent;
-    color: #fff;
+    color: #500bbe;
     cursor: pointer;
     margin: 5px;
     width: 45%;
