@@ -71,7 +71,18 @@ body, html {
     align-content: flex-start;
     background: #fefefe;
 }
-
+.empty:after{
+    color: #aaa;
+    font-size:1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0px);
+    content: "Nenhuma nota";
+}
 .btn {
   display: flex;
   justify-content: center;

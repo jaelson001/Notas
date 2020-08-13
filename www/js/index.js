@@ -37,7 +37,11 @@ window.onload = function(){
 
             del.addEventListener("click", function(){
                 var id = this.parentNode.getAttribute("id");
+                var content = document.getElementById(id).parentNode.getAttribute("id");
                 document.getElementById(id).outerHTML = "";
+                if(document.getElementById(content).innerHTML == ''){
+                    document.getElementById(content).classList.add("empty");
+                }
 
                 // REMOVER LOCALMENTE
                 localStorage.removeItem(id);
@@ -53,6 +57,7 @@ window.onload = function(){
             });
             
             document.getElementById("content").appendChild(nota);
+            document.getElementById("content").classList.remove("empty");
         }
     }
 }
@@ -128,7 +133,11 @@ var app = {
 
             del.addEventListener("click", function(){
                 var id = this.parentNode.getAttribute("id");
+                var content = document.getElementById(id).parentNode.getAttribute("id");
                 document.getElementById(id).outerHTML = "";
+                if(document.getElementById(content).innerHTML == ''){
+                    document.getElementById(content).classList.add("empty");
+                }
 
                 // REMOVER LOCALMENTE
                 localStorage.removeItem(id);
@@ -148,6 +157,7 @@ var app = {
             });
             
             document.getElementById("content").appendChild(nota);
+            document.getElementById("content").classList.remove("empty");
 
             document.getElementById("popup_note_title").value = "";
             document.getElementById("popup_note_description").value = "";
